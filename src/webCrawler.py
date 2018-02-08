@@ -22,7 +22,8 @@ def zulu(start_url):
         source_code = request.get(url)
         plain_text = source_code.text
         formattedSource = bs(plain_text)
-        for link in formattedSource.findAll('a'):
+        for link in formattedSource.findAll('a'):               #if there are multiple <a> tags from which we want to extract href and text values.
+                                                                #We use the find_all() method which returns a collection of elements.
             href = start_url + "/"+ link.get('href')
             q.enqueue(href)
             print(href)
