@@ -52,7 +52,7 @@ def __main__():
     print('I am an Alpha web crawler developed by Debaditya Dey...')
     print('He made me out of sheer excitement and frustration that he didn\'t code something cool for many days')
     print('I am just a 10 minute build, so I may crash sometimes!')
-    print('Debaditya promises to make e better in the coming days')
+    print('Debaditya promises to make me better in the coming days')
     print('You are welcome to contribute and drop pull requests on his github repo')
     print('Till then, then you can fiddle around and enjoy with me')
     print('###################################\n\n')
