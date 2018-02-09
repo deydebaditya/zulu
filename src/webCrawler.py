@@ -26,8 +26,11 @@ def zulu(start_url):
         visited.add(url)
         source_code = request.get(url)
         plain_text = source_code.text
-        formattedSource = bs(plain_text, "html.parser")
-        for link in formattedSource.findAll('a'):
+
+        formattedSource = bs(plain_text)
+              
+        for link in formattedSource.findAll('a'):               #if there are multiple <a> tags from which we want to extract href and text values.
+                                                                #We use the find_All() method which returns a collection of elements
             if(link.get('href') is "#" or link.get('href') is "" or link.get('href') is " " or visited.__contains__(link.get('href')) or listed.__contains__(link.get('href'))):
                 continue
             listed.add(link.get('href'))
@@ -43,7 +46,6 @@ def zulu(start_url):
             else:
                 q.enqueue(link.get('href'))
                 print("Crawled URL: " +link.get('href'))
-
 
 def __main__():
     print('Welcome to ZULU!')
