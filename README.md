@@ -13,3 +13,6 @@ Commands to run ZULU :
 ->Finally,
 
 <b>python webCrawler.py</b>
+<br>
+<br>
+To submit an issue, please check the Issue Guidelines at meta/ISSUE_TEMPLATE.md
