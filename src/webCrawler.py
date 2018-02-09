@@ -54,7 +54,7 @@ def __main__():
     print('I am just a 10 minute build, so I may crash sometimes!')
     print('Debaditya promises to make me better in the coming days')
     print('You are welcome to contribute and drop pull requests on his github repo')
-    print('Till then, then you can fiddle around and enjoy with me')
+    print('Till then, you can fiddle around and enjoy with me')
     print('###################################\n\n')
     start_url = str(input('Enter the full URL from which I should start crawling:'))
     zulu(start_url)
