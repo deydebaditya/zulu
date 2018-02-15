@@ -49,7 +49,7 @@ def zulu(start_url):
 
 def __main__():
     print('Welcome to ZULU!')
-    print('I am an Alpha web crawler developed by Debaditya Dey...')
+    print('I am an Alpha web crawler developed by GECA')
     print('He made me out of sheer excitement and frustration that he didn\'t code something cool for many days')
     print('I am just a 10 minute build, so I may crash sometimes!')
     print('Debaditya promises to make me better in the coming days')
