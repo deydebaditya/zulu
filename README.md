@@ -10,7 +10,7 @@ Commands to run ZULU :
 ->Secondly, install 'BeautifulSoup' via<br>
 <i>pip install BeautifulSoup</i>
 
-->Finally,
+->Finally, do the following
 
 <b>python webCrawler.py</b>
 <br>
