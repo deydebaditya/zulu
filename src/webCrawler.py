@@ -2,6 +2,7 @@ import requests as request
 from bs4 import BeautifulSoup as bs
 import re
 
+#A simple edit
 #queue for storing the visited links
 class Queue:
     def __init__(self):
