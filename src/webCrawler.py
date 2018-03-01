@@ -1,17 +1,18 @@
 import requests as request
 from bs4 import BeautifulSoup as bs
 import re
+from collections import deque
 
 #queue for storing the visited links
 class Queue:
     def __init__(self):
-        self.items = []
+        self.items = deque()
     def isEmpty(self):
-        return self.items == []
-    def enqueue(self,item):
-        self.items.insert(0,item)
-    def dequeue(self):
-        return self.items.pop()
+        return bool(self.items)
+    def enqueue(self,item):    # insertion at back
+        self.items.append(item)
+    def dequeue(self):         # deletion at front
+        return self.items.popleft()
     def size(self):
         return len(self.items)
 
@@ -20,7 +21,7 @@ def zulu(start_url):
     q.enqueue(start_url)
     visited = set()
     listed = set()
-    while(q.isEmpty() == False):
+    while not q.isEmpty():
         url = q.dequeue()
         print("Popped: "+url)
         visited.add(url)
@@ -38,14 +39,15 @@ def zulu(start_url):
             #print(temp)
             if("mailto" in temp):
                 continue
-            if(("http" not in temp)):
-                if("https" not in temp):
-                    print('Not found URL')
-                    q.enqueue(start_url + "/" + link.get('href'))
-                    print("Crawled URL: " + start_url + "/" + link.get('href'))
-            else:
+            if "http" in temp:
                 q.enqueue(link.get('href'))
                 print("Crawled URL: " +link.get('href'))
+            else:
+                print('Not found URL')
+                q.enqueue(start_url + "/" + link.get('href'))
+                print("Crawled URL: " + start_url + "/" + link.get('href'))
+
+                
 
 def __main__():
     print('Welcome to ZULU!')
