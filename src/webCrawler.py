@@ -59,6 +59,6 @@ def __main__():
     print('Till then, you can fiddle around and enjoy with me')
     print('###################################\n\n')
     start_url = str(input('Enter the full URL from which I should start crawling:'))
-    zulu(start_url)
+    zulu("https://" + start_url)
 
 __main__()
