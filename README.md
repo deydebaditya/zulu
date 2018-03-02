@@ -8,7 +8,7 @@ Commands to run ZULU :
 <i>pip install requests</i>
 
 ->Secondly, install 'BeautifulSoup' via<br>
-<i>pip install BeautifulSoup</i>
+<i>pip install bs4</i>
 
 ->Finally, do the following
 
