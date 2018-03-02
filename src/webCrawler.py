@@ -8,9 +8,10 @@ class Queue:
     def __init__(self):
         self.items = deque()
     def isEmpty(self):
-        return bool(self.items)
+        return not bool(self.items)     #bool() return True if items are present in the list, so a negation is required.
     def enqueue(self,item):    # insertion at back
         self.items.append(item)
+        #print(self.items)      #Housekeeping
     def dequeue(self):         # deletion at front
         return self.items.popleft()
     def size(self):
@@ -18,6 +19,7 @@ class Queue:
 
 def zulu(start_url):
     q = Queue()
+    #print(start_url)       #Housekeeping
     q.enqueue(start_url)
     visited = set()
     listed = set()
@@ -51,10 +53,10 @@ def zulu(start_url):
 
 def __main__():
     print('Welcome to ZULU!')
-    print('I am an Alpha web crawler developed by Debaditya Dey...')
+    print('I am an Alpha web crawler developed by an awesome team...')
     print('He made me out of sheer excitement and frustration that he didn\'t code something cool for many days')
     print('I am just a 10 minute build, so I may crash sometimes!')
-    print('Debaditya promises to make me better in the coming days')
+    print('The team promises to make me better in the coming days')
     print('You are welcome to contribute and drop pull requests on his github repo')
     print('Till then, you can fiddle around and enjoy with me')
     print('###################################\n\n')
