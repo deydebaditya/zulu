@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup as bs
 import re
 from collections import deque
 
+#A simple edit
 #queue for storing the visited links
 class Queue:
     def __init__(self):
@@ -29,7 +30,7 @@ def zulu(start_url):
         plain_text = source_code.text
 
         formattedSource = bs(plain_text)
-              
+
         for link in formattedSource.findAll('a'):               #if there are multiple <a> tags from which we want to extract href and text values.
                                                                 #We use the find_All() method which returns a collection of elements
             if(link.get('href') is "#" or link.get('href') is "" or link.get('href') is " " or visited.__contains__(link.get('href')) or listed.__contains__(link.get('href'))):
