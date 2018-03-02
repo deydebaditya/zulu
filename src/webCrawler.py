@@ -8,7 +8,7 @@ class Queue:
     def __init__(self):
         self.items = deque()
     def isEmpty(self):
-        return bool(self.items)
+        return not bool(self.items)
     def enqueue(self,item):    # insertion at back
         self.items.append(item)
     def dequeue(self):         # deletion at front
