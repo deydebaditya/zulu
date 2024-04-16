@@ -22,7 +22,7 @@ def zulu(start_url):
     if start_url.endswith('/'):
         clean_url = start_url[:-1] #this removes any trailing '/' in the urls
     
-    print(clean_url)       #Housekeeping
+    #print(clean_url)       #Housekeeping
     q.enqueue(clean_url)
     visited = set()
     listed = set()
@@ -41,7 +41,7 @@ def zulu(start_url):
                 continue
             listed.add(link.get('href'))
             temp = link.get('href')
-            print(temp)
+            #print(temp)
             if("mailto" in temp):
                 continue
             elif "http" in temp:
