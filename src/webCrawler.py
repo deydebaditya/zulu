@@ -53,10 +53,7 @@ def zulu(start_url):
 
 def __main__():
     print('Welcome to ZULU!')
-    print('I am an Alpha web crawler developed by an awesome team...')
-    print('He made me out of sheer excitement and frustration that he didn\'t code something cool for many days')
-    print('I am just a 10 minute build, so I may crash sometimes!')
-    print('The team promises to make me better in the coming days')
+    print('I am an Alpha web crawler')
     print('You are welcome to contribute and drop pull requests on his github repo')
     print('Till then, you can fiddle around and enjoy with me')
     print('###################################\n\n')
