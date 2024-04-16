@@ -19,8 +19,11 @@ class Queue:
 
 def zulu(start_url):
     q = Queue()
-    #print(start_url)       #Housekeeping
-    q.enqueue(start_url)
+    if start_url.endswith('/'):
+        clean_url = start_url[:-1] #this removes any trailing '/' in the urls
+    
+    #print(clean_url)       #Housekeeping
+    q.enqueue(clean_url)
     visited = set()
     listed = set()
     while not q.isEmpty():
@@ -41,13 +44,13 @@ def zulu(start_url):
             #print(temp)
             if("mailto" in temp):
                 continue
-            if "http" in temp:
+            elif "http" in temp:
                 q.enqueue(link.get('href'))
                 print("Crawled URL: " +link.get('href'))
             else:
                 print('Not found URL')
-                q.enqueue(start_url + "/" + link.get('href'))
-                print("Crawled URL: " + start_url + "/" + link.get('href'))
+                q.enqueue(clean_url + link.get('href'))
+                print("Crawled URL: " + clean_url + link.get('href'))
 
                 
 
